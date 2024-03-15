@@ -1,25 +1,33 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import '../Styles/Footer.css'
-
-const words = ["The members-only top-tier music supervision platform", "Coming soon", "A hyper-curated sync marketplace with the best labels"]
-
+import React, { useEffect, useState } from 'react';
+import '../Styles/Footer.css';
 
 export default function Footer() {
-    const [wordIndex, setWordIndex] = useState(0)
+    const [index, setIndex] = useState();
+    
+    const words = [
+        "The members-only top-tier music supervision platform",
+        "Coming soon",
+        "A hyper-curated sync marketplace with the best labels"
+    ];
+
     useEffect(() => {
         const interval = setInterval(() => {
-            setWordIndex((wordIndex + 1) % words.length)
-        }, 2000)
-        return () => clearInterval(interval)
-    }, [wordIndex])
-  return (
-    <footer>
-        <div className='carousel-container'>
-        <p><strong>{
-            words[wordIndex]
-            }</strong></p>
-        </div>
-    </footer>
-  )
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <footer>
+            <div className='carousel-container'>
+                <p>
+                    {words.map((word, index) => (
+                        <span key={index}>
+                            {word}
+                        </span>
+                    ))}
+                </p>
+            </div>
+        </footer>
+    );
 }

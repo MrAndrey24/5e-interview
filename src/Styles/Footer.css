@@ -1,12 +1,28 @@
 .carousel-container {
-  display: flex;
-  justify-content: center;
-  border: 1px solid black; /* Borde alrededor del carrusel */
-  padding: 10px; /* Espaciado interior */
-  margin: 0 auto; /* Centra el contenedor */
-  max-width: 100%; /* Ancho máximo del contenedor */
+  overflow: hidden;
+  border: 1px solid black; /* Borde para visualización */
+  width: 100%; /* Ajusta el ancho según sea necesario */
 }
 
 .carousel-container p {
   margin: 0;
+  animation: marquee 10s linear infinite; /* Animación de desplazamiento */
+}
+
+.carousel-container span {
+  display: inline-block;
+  padding-right: 20px; /* Espacio entre palabras */
+}
+
+.carousel-container .active {
+  animation: none; /* Detiene la animación en la palabra activa */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
