@@ -1,0 +1,12 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black; /* Borde alrededor del carrusel */
+  padding: 10px; /* Espaciado interior */
+  margin: 0 auto; /* Centra el contenedor */
+  max-width: 100%; /* Ancho máximo del contenedor */
+}
+
+.carousel-container p {
+  margin: 0;
+}

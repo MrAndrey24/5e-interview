@@ -1,0 +1,15 @@
+.h.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Esto asegurará que la sección hero ocupe toda la altura de la pantalla */
+}
+
+.hero h1 {
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.cover-image {
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
