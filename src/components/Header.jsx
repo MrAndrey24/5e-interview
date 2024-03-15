@@ -7,11 +7,9 @@ export default function Header() {
   return (
     <header>
     <nav>
-       <div className='logo-container'>
        <div className="logo">
             <img src={logo} alt="" />
         </div>
-       </div>
         <div className="user-info">
             <div className="email">
                 <p>hello@cataglog.ac</p>

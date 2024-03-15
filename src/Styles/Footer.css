@@ -14,10 +14,6 @@
   padding-right: 20px; /* Espacio entre palabras */
 }
 
-.carousel-container .active {
-  animation: none; /* Detiene la animación en la palabra activa */
-}
-
 @keyframes marquee {
   0% {
     transform: translateX(100%);
